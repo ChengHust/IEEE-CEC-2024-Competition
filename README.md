@@ -1,49 +1,39 @@
 # IEEE-CEC-2023-Competition
-The Platform for CEC 2023 Competition on "Large-scale Continuous Optimization for Non-contact Measurement"
+The Platform for CEC 2024 Competition on "Super Large-scale Multiobjective Optimization for Status Assessment of Measuring Equipment"
 
-**Please use the PlatEMO v4.0 as the platform for competition**
+**Please use the PlatEMO v4.4 as the platform for competition**
 
 ## Overview & Aim:
 ***
-  Evolutionary algorithms (EAs) have been a popular optimization tool for decades, showing their promising performance in solving various benchmark optimization problems. Nevertheless, using EAs on continuous optimization with over 100 decision variables (large-scale optimization problems, LSOPs) remains challenging due to the "curse of dimensionality". This phenomenon is more significant for those LSOPs in emerging applications, e.g., lightweight vehicle design, industrial power delivery and scheduling, smart grid optimization, and data sensitivity analysis. Specifically, LSOPs in emerging applications are challenging due to the enormous search space, irregularity in variable interactions and objective functions, and the existence of massive local optima. Conventional EAs may cost unbearable function evaluations (FEs) and computation time to obtain acceptably converged/diverse results. In extreme scenarios, most EAs fail to converge to the optima no matter how many FEs are consumed, or may fail to obtain enough diversity information for decision-making. The design of practical EAs for solving LSOPs in real-world applications is urgent and meaningful.
-  
-  IntelliSense is an emerging topic in recent years, which plays a crucial part in intelligent sensing for modern industry and society, e.g., the Internet of Things (IoT), smart grids, and intelligent robots. Among various IntelliSense scenarios, the non-contact measurement in electronic engineering has shown its great potential and importance. As the most extensive man-made system in the world, the modern electric system requires the measurement of voltages and currents accurately and safely in real-time. How to non-contact measure voltages and currents in a bundle of conductors enclosed in a structure has been an emerging topic in power distribution, power electronics, and power quality evaluation, to mention just a few fields of interest. The use of computational intelligence techniques, especially evolutionary computation, starts a new direction for non-contact measurement. Specifically, the black-box measurement task can be solved by EAs only, and the system can access real-time information with the assistance of effective and efficient EAs. Also, the non-contact measurement can be extended to other areas for intelligent sensing.
-  
-  This competition has two tracks: large-scale continuous single- and multi-objective optimization in two non-contact measurement cases. We carefully select six LSOPs for each track from two tasks, i.e., non-contact voltage measurement for multiconductor systems (NVM) and non-contact current measurement for multiconductor systems (NIM).
+  Evolutionary algorithms (EAs) have been a popular optimization tool for decades, which have shown promising performance in solving various benchmark optimization problems. Nevertheless, using EAs on multiobjective optimization with over 100 decision variables (large-scale multiobjective optimization problems, LSMOPs) remains challenging due to the "curse of dimensionality". This phenomenon is more significant for LSMOPs in complex man-made systems, e.g., railway systems, social networks, and power systems. Specifically, EAs suffer from difficulties in dealing with enormous search space, irregularity in variable interactions and objective functions, and the existence of massive local optima for LSMOPs in emerging and critical applications. Existing optimization algorithms may cost unbearable function evaluations (FEs) and computation time (time complexity) to obtain acceptably converged/diverse results. Unfortunately, this phenomenon is more serious when the number of decision variables increases from large scale (>100) to super large scale (>1,000,000), where the limitation in storage memory rises due to the increased space complexity. Both time and memory efficiency, as well as search effectiveness, should be considered when dealing with super large-scale multiobjective optimization problems (SSMOPs), for filling the gap between complex real-world optimization and advanced optimization algorithms.
 
-* The NVM takes advantage of the electric field around the conductors for estimating the ground truth voltage values. This NVM problem includes two types of decision variables, i.e., fixed positions of the conductors and time-varying ground truth voltage values. Generally, the variable interactions are complex in the NVM problem. First, the six position variables interact with each other. Second, the voltages in each phase interact with each other sequentially but do not interact with the voltages in other phases. Third, all the voltages are directly interacting with the positions. An illustrative example of the principle for NVM problems is given in Fig. 1.
-
-<img src="https://github.com/ChengHust/IEEE-CEC-2023-Competition/blob/main/NVM.png" /> 
-Fig. 1 The principle of the NVM problems. (a) The cross section of three-phase systems and sensors; (b) the distribution of the measured electric field (EF) and the measured and calculated EF intensities around the housing; (c) the three-phase voltages obtained by minimizing the EF intensities in (b).
+<img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC0_IEEE_30_nodes.png" />
+Fig. 1 The IEEE 30-node standard topology for OSA-IT problems.
 
 
-* In NIM tasks, the magnetic field information around the conductors is used to estimate the ground truth current values. Different from NVM, the variables of NIM can be more complex. First, more position variables are needed for the model building to cope with conductor tilt, as shown in Fig. 2 (a). Second, the magnetic field information around the conductor may contain interference noise, aggravating the difficulty in robustly obtaining the ground truth currents, as shown in Fig. 2 (b). Third, complex numbers are involved in real-time current measurement.
+* In this competition, we carefully format three SSMOPs from one interesting real-world application: online status assessment of instrument transformers in wide-area power systems (OSA-IT). The IEEE 30-node standard topology, refer to Figure 1, with a time-varying workload is modelled and simulated to obtain measured data of the system, aiming to assess the status of instrument transformers. Generally, the time-varying voltages, currents, and system-level parameters are formatted as decision variables, the differences between the estimated results and physical rules of the system are modelled as the objectives. Three OSA-IT problems with 1 million, 10 million, and 100 million decision variables are given in this competition (the detailed descriptions will be given in the competition website). As an extension of the TREE test suite, this competition is expected to promote the research in smart grid and advanced optimization algorithms, and to explore some potential research directions for super large scale optimization, especially for the community of computational intelligence.
+
+* Participants are encouraged to develop the algorithm to solve this type of optimization problem, not just a specific one of them. Participants may propose a new optimization algorithm or utilize a hybrid form of previously proposed algorithms. Remarkably, it is not restricted in the field of evolutionary computing, and using commercial optimization software is allowed. Participants are required to submit their own source codes, a brief description of the optimization algorithm, and a brief code instruction. Organizers will carry out the performance evaluation of your proposed algorithm in all three problems to guarantee its fairness. With the same computational budget, the best solution of each problem obtained by running your algorithm 1 time will be compared directly.
 
 <img src="https://github.com/ChengHust/IEEE-CEC-2023-Competition/blob/main/NIM.png" /> 
 Fig. 2 The NIM problems in practice. (a) Three-phase conductors are inclined to each other; (b) The measured magnetic field with interference noise.
 
 ## Platform & Parameter settings
-Participants are encouraged to develop the algorithm to solve this type of optimization problem, not just a specific one of them. Participants may propose a new optimization algorithm or utilize a hybrid form of previously proposed algorithms. However, it must be restricted in the field of evolutionary computing. Participants are required to submit their own source codes, a brief description of the optimization algorithm, a brief code instruction, and the data generated by the platform. Organizers will assess the quality of your submitted data in all six problems to guarantee its fairness. With the same computational budget, the best solution for each problem obtained by randomly running your algorithm 30 times will be compared directly. 
+Participants are encouraged to develop the algorithm to solve this type of optimization problem, not just a specific one of them. Participants may propose a new optimization algorithm or utilize a hybrid form of previously proposed algorithms. Notably, it is not restricted in the field of evolutionary computing. Participants are required to submit their own source codes, a brief description of the optimization algorithm, a brief code instruction, and the data generated by the platform. Organizers will assess the quality of your submitted data in all six problems to guarantee its fairness. With the same computational budget, the best solution for each problem obtained by randomly running your algorithm 1 times will be compared directly. 
 
-The PlatEMO v4.0 will be used as the competition platform for fair comparisons (PlatEMO v4.0), with population size (N=100), number of independent runs (run=30), and number of results (20). The code of an example settings is give as 
+The PlatEMO v4.4 will be used as the competition platform for fair comparisons (PlatEMO v4.4), with population size (N=50), number of independent runs (run=1), and number of results (1). The code of an example settings is give as 
 ```
-platemo('problem',@SONVM1,'algorithm',@GA,'N',100,'maxFE',100000,'save',20)
+platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
 ```
-* For **Single-objective Optimization Track**, the test problems are
-  SONVM1 (D=129), SONVM3 (D=1008), SONVM5 (D=1506), 
-  SONIM1 (D=1506), SONIM2(D=3006), SONIM3 (D=3006).
-  The maximum number of function evaluations (maxFE=***1e6 for SONIM Problems, and maxFE=1e5 for SONVM Problems***).
-  <img src="https://github.com/ChengHust/IEEE-CEC-2023-Competition/blob/main/SOP_track.png" /> 
   
-* For **Multi-objective Optimization Track**, the test problems are
-  MONVM2 (D=4605), MONVM4 (D=22206), MONVM6 (D=54756),
-  MONIM1 (D=3006), MONIM2(D=3006), MONIM3 (D=3006).
-  The maximum number of function evaluations (***maxFE=1e8 for MONVM and MONIM Problems***).
-  <img src="https://github.com/ChengHust/IEEE-CEC-2023-Competition/blob/main/MOP_track.png" /> 
+* The test problems are
+  ETT1 (D=1251016), ETT2 (D=12510016), ETT3 (D=125100016),
+  The maximum number of function evaluations (***maxFE=1e7, 1e6, 1e5 for the three problems, respectively ***).
+  <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
 * Participants are allowed to use the parallel execution mode for efficiency.
 
 ## Important Dates:
-For participants planning to submit a paper to the 2023 IEEE Congress on Evolutionary Computation:
+For participants planning to submit a paper to the 2024 IEEE Congress on Evolutionary Computation:
 ### Paper submission: 13 Jan 2023
   - We have also hosted two special sessions on CEC 2023 ("Large-scale multi-objective optimization in emerging applications" and "EC in Healthcare Industry").
   - Paper reviews: 3 Mar 2023 
@@ -68,21 +58,5 @@ Note: You are encouraged to submit your paper to the given at: [CEC 2023](https:
   School of Electrical and Electronic Engineering, Huazhong University of Science and Technology, Wuhan 430074, China. 
   lihongbin@hust.edu.cn
 * ***Yaochu Jin***
-  Faculty of Technology, Bielefeld University, D-33615 Bielefeld, Germany
-  yaochu.jin@uni-bielefeld.de
-
-## Competition Winners for the Single-objective Optimization Track:
-* ***Winner***
-  H2IMODE, Chaojun Ma, Yonglin He, You Wu, Lianghao Li, Huazhong University of Science and Technology
-* ***1st runner-up***
-  CC-CMAES-LAG, Yapei Wu, Tong Liu, Yanan Li, Xingguang Peng, Northwestern Polytechnical University
-* ***2nd Runner Up***
-  MIDEX, Chauanji Zhang, Cheng Cheng, Huazhong University of Science and Technology
-
-## Competition Winners for the Multi-objective Optimization Track:
-* ***Winner***
-  SLMEA, Luchen  Wang, Shuai Shao,  Chengming Wu, Shangshang Yang, Anhui University
-* ***1st runner-up***
-  LMOEA-DS, Shufen Qin, Pengpeng Zhao, Lu Wang, Xinyu Ren, Taiyuan University of Science and Technology
-* ***2nd Runner Up***
-  MOEA/D-DE-DVA, 	Yongcun Liu, Junfeng Tang, Nan Zheng, Haoran Gu, Xidian University
+  School of Engineering, Westlake University, Hangzhou 310030, China
+  jinyaochu@westlake.edu.cn
