@@ -49,6 +49,10 @@ Note: You are encouraged to submit your paper to the given at: [CEC 2024](https:
   - Results submission deadline: 15 June 2024
   - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
 
+**Each winner will get an IEEE certificate!!!**
+**An award funding  of CNY 10,000 will be sponsored by GLRODA (https://www.glroad.com/)!!!**
+**An award funding of USD 500 will be applied from the IEEE CIS Education Competition Subcommittee!!!**
+
 ## Competition Organizers:
 * ***Cheng He***
   School of Electrical and Electronic Engineering, Huazhong University of Science and Technology, Wuhan 430074, China. 
