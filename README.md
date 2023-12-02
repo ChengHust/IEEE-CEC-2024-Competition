@@ -5,18 +5,21 @@ The Platform for CEC 2024 Competition on "Super Large-scale Multiobjective Optim
 
 ## Overview & Aim:
 ***
-  Evolutionary algorithms (EAs) have been a popular optimization tool for decades, which have shown promising performance in solving various benchmark optimization problems. Nevertheless, using EAs on multiobjective optimization with over 100 decision variables (large-scale multiobjective optimization problems, LSMOPs) remains challenging due to the "curse of dimensionality". This phenomenon is more significant for LSMOPs in complex man-made systems, e.g., railway systems, social networks, and power systems. Specifically, EAs suffer from difficulties in dealing with enormous search space, irregularity in variable interactions and objective functions, and the existence of massive local optima for LSMOPs in emerging and critical applications. Existing optimization algorithms may cost unbearable function evaluations (FEs) and computation time (time complexity) to obtain acceptably converged/diverse results. Unfortunately, this phenomenon is more serious when the number of decision variables increases from large scale (>100) to super large scale (>1,000,000), where the limitation in storage memory rises due to the increased space complexity. Both time and memory efficiency, as well as search effectiveness, should be considered when dealing with super large-scale multiobjective optimization problems (SSMOPs), for filling the gap between complex real-world optimization and advanced optimization algorithms.
+  Evolutionary algorithms (EAs) have been a popular optimization tool for decades, showing promising performance in solving various benchmark optimization problems. Nevertheless, using EAs on multiobjective optimization with over 100 decision variables (large-scale multiobjective optimization problems, LSMOPs) remains challenging due to the "curse of dimensionality". This phenomenon is more significant for LSMOPs in complex man-made systems, e.g., railway systems, social networks, and power systems. Specifically, EAs suffer from difficulties in dealing with enormous search space, irregularity in variable interactions and objective functions, and the existence of massive local optima for LSMOPs in emerging and critical applications. Existing optimization algorithms may cost unbearable function evaluations (FEs) and computation time (time complexity) to obtain acceptably converged/diverse results. Unfortunately, this phenomenon is more serious when the number of decision variables increases from large scale (>100) to super large scale (>1,000,000), where the limitation in storage memory rises due to the increased space complexity. Both time and memory efficiency, as well as search effectiveness, should be considered when dealing with super large-scale multiobjective optimization problems (SSMOPs), for filling the gap between complex real-world optimization and advanced optimization algorithms.
 
 <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC0_IEEE_30_nodes.png" />
 Fig. 1 The IEEE 30-node standard topology for OSA-IT problems.
 
 
-* In this competition, we carefully format three SSMOPs from one interesting real-world application: online status assessment of instrument transformers in wide-area power systems (OSA-IT). The IEEE 30-node standard topology, refer to Figure 1, with a time-varying workload is modelled and simulated to obtain measured data of the system, aiming to assess the status of instrument transformers. Generally, the time-varying voltages, currents, and system-level parameters are formatted as decision variables, the differences between the estimated results and physical rules of the system are modelled as the objectives. Three OSA-IT problems with 1 million, 10 million, and 100 million decision variables are given in this competition (the detailed descriptions will be given in the competition website). As an extension of the TREE test suite, this competition is expected to promote the research in smart grid and advanced optimization algorithms, and to explore some potential research directions for super large scale optimization, especially for the community of computational intelligence.
+In this competition, we carefully format three SSMOPs from one interesting real-world application: online status assessment of instrument transformers in wide-area power systems (OSA-IT). The IEEE 30-node standard topology, refer to Figure 1, with a time-varying workload, is modelled and simulated to obtain measured data of the system, aiming to assess the status of instrument transformers. Generally, the time-varying voltages, currents, and system-level parameters are formatted as decision variables, and the differences between the estimated results and physical rules of the system are modelled as the objectives. Three OSA-IT problems with 1 million, 10 million, and 100 million decision variables are given in this competition.
+As an extension of the TREE test suite, this competition is expected to promote research in smart grids and advanced optimization algorithms and explore some potential research directions for super large-scale optimization, especially for the community of computational intelligence.
 
-* Participants are encouraged to develop the algorithm to solve this type of optimization problem, not just a specific one of them. Participants may propose a new optimization algorithm or utilize a hybrid form of previously proposed algorithms. Remarkably, it is not restricted in the field of evolutionary computing, and using commercial optimization software is allowed. Participants are required to submit their own source codes, a brief description of the optimization algorithm, and a brief code instruction. Organizers will carry out the performance evaluation of your proposed algorithm in all three problems to guarantee its fairness. With the same computational budget, the best solution of each problem obtained by running your algorithm 1 time will be compared directly.
-
-<img src="https://github.com/ChengHust/IEEE-CEC-2023-Competition/blob/main/NIM.png" /> 
-Fig. 2 The NIM problems in practice. (a) Three-phase conductors are inclined to each other; (b) The measured magnetic field with interference noise.
+Participants are encouraged to develop the algorithm to solve this optimization problem, not just a specific one. 
+Participants may propose a new optimization algorithm or utilize a hybrid of previously proposed algorithms.
+Remarkably, it is not restricted to evolutionary computing, and commercial optimization software is allowed. 
+Participants must submit their source codes, a brief description of the optimization algorithm, and a brief code instruction. 
+Organizers will evaluate your proposed algorithm's performance in all three problems to guarantee its fairness. 
+With the same computational budget, the best solution for each problem obtained by running your algorithm one time will be compared directly.
 
 ## Platform & Parameter settings
 Participants are encouraged to develop the algorithm to solve this type of optimization problem, not just a specific one of them. Participants may propose a new optimization algorithm or utilize a hybrid form of previously proposed algorithms. Notably, it is not restricted in the field of evolutionary computing. Participants are required to submit their own source codes, a brief description of the optimization algorithm, a brief code instruction, and the data generated by the platform. Organizers will assess the quality of your submitted data in all six problems to guarantee its fairness. With the same computational budget, the best solution for each problem obtained by randomly running your algorithm 1 times will be compared directly. 
@@ -31,17 +34,19 @@ platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
   The maximum number of function evaluations (***maxFE=1e7, 1e6, 1e5 for the three problems, respectively ***).
   <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
 * Participants are allowed to use the parallel execution mode for efficiency.
+* It is remarkable that an individual with a high-dimensional problem will be memory-costly in PlatEMO. For example, the memory cost will be 20Gbits, 40Gbits, and 80Gbits for the three problems with a population size of 50.
+* To avoid memory overflow in Matlab, it is suggested that matrix operation related to decision variables should be re-write in the "for-end" format. 
+
 
 ## Important Dates:
 For participants planning to submit a paper to the 2024 IEEE Congress on Evolutionary Computation:
 ### Paper submission: 13 Jan 2023
-  - We have also hosted two special sessions on CEC 2023 ("Large-scale multi-objective optimization in emerging applications" and "EC in Healthcare Industry").
-  - Paper reviews: 3 Mar 2023 
-  - Paper re-submission: 24 Mar 2023 
-  - Paper final notifications: 31 Mar 2023 
-Note: You are encouraged to submit your paper to the given at: [CEC 2023](https://2023.ieee-cec.org/)
+ - Deadline: 15th January 2024
+ - Notification: 15th March 2024
+ - Congress: 30th June 2024 - 5th July 2024, Yokohama, Japan
+Note: You are encouraged to submit your paper to the given at: [CEC 2024](https://2024.ieeewcci.org/)
 **Participants for competition** only:
-  - Results submission deadline: 28 April 2023 
+  - Results submission deadline: 15 June 2024
   - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
 
 ## Competition Organizers:
