@@ -53,14 +53,13 @@ platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
   <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
 * It is remarkable that an individual with a high-dimensional problem will be memory-costly in PlatEMO. Please revise the corresponding code to satisfy the memory requirements.
 * To avoid memory overflow in Matlab, it is suggested that matrix operations related to decision variables should be re-write in the "for-end" loop style, e.g.,
-* 
-```
+```python
 Offspring  = OperatorGA(Problem,Population);
 ```
 should be re-written as
-```
+```python
 for i = 1 : N/2
-  Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
+Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
 end
 ```
 Also, a smaller population size, e.g., 10 or 20, could be set to satisfy the memory requirement.
