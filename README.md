@@ -76,6 +76,7 @@ For participants planning to submit a paper to the 2024 IEEE Congress on Evoluti
 Note: You are encouraged to submit your paper to two relevant special sessions via [CEC 2024](https://2024.ieeewcci.org/), i.e.
  - [Evolutionary Computation in Healthcare Industry](https://sites.google.com/view/ieee-cis-tf-ish/wcci-2024-special-session-on-healthcare)
  - [Large-scale Multi-objective Optimization](https://github.com/BIMK/cec2024)
+
 **Participants for competition**
  - Results submission deadline: 15 June 2024
  - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
