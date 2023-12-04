@@ -30,6 +30,13 @@ platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
 ```
   
 * The test problems are
+
+|             Problem             |      Number of Objectives       |   Number of Decision Variables     |   Number of Function Evaluations    |  Cost of Memory (Popsize=10)    |
+| :-----------------------------: | :-----------------------------: | :-------------------------------:  | :--------------------------------:  | :----------------------------:  |
+|             ETT1                |              M=2                |             D = 1,251,016          |                FE = 1E7             |                ≈ 20 Gbit        |
+|             ETT2                |              M=2                |             D = 12,510,016         |                FE = 1E6             |                ≈ 40 Gbit        |
+|             ETT3                |              M=2                |             D = 125,100,016        |                FE = 1E5             |                ≈ 80 Gbit        |
+
   ETT1 (D=1251016), ETT2 (D=12510016), ETT3 (D=125100016),
   The maximum number of function evaluations (***maxFE=1e7, 1e6, 1e5 for the three problems, respectively ***).
   <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
