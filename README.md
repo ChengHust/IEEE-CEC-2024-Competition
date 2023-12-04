@@ -37,7 +37,7 @@ Participants are required to submit their source codes, a brief description of t
 Organizers will assess the quality of your submitted data in all six problems to guarantee its fairness. 
 With the same computational budget, the best solution for each problem obtained by randomly running your algorithm one time will be compared directly. 
 
-The PlatEMO v4.4 will be used as the competition platform for fair comparisons, with population size (N=50), number of independent runs (run=1), and number of results (1). The code of an example setting is give as 
+The PlatEMO v4.4 will be used as the competition platform for fair comparisons, with population size (N=50), number of independent runs (run=1), and number of results (1). The code of an example setting is given as 
 ``` shell
 platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
 ```
@@ -51,13 +51,13 @@ platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
 |             ETT3                |              M=2                |             D = 125,100,016        |                FE = 1E5             |                ≈ 80 Gbit        |
 
   <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
-* It is remarkable that an individual with a high-dimensional problem will be memory-costly in PlatEMO. For example, the memory cost will be 20Gbits, 40Gbits, and 80Gbits for the three problems with a population size of 50.
+* It is remarkable that an individual with a high-dimensional problem will be memory-costly in PlatEMO. Please revise the corresponding code to satisfy the memory requirements.
 * To avoid memory overflow in Matlab, it is suggested that matrix operations related to decision variables should be re-write in the "for-end" loop style, e.g.,
-``` shell
+```python
 Offspring  = OperatorGA(Problem,Population);
 ```
 should be re-written as
-``` shell
+```python
 for i = 1 : N/2
   Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
 end
