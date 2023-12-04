@@ -20,7 +20,8 @@ In this competition, we carefully format three SSMOPs from one interesting real-
 The IEEE 30-node standard topology, refer to Figure 1, with a time-varying workload, is modelled and simulated to obtain measured data of the system, aiming to assess the status of instrument transformers. 
 Generally, the time-varying voltages, currents, and system-level parameters are formatted as decision variables, and the differences between the estimated results and physical rules of the system are modelled as the objectives. 
 Three ETT problems with 1 million, 10 million, and 100 million decision variables are given in this competition.
-As an extension of the TREE test suite, this competition is expected to promote research in smart grids and advanced optimization algorithms and explore some potential research directions for super large-scale optimization, especially for the computational intelligence community.
+Complicated variable interactions (e.g., partial separability and overlapping interactions) and variable properties (e.g., system parameters and measurement values) are involved, making the ETT problems challenging and representative.
+As an extension of the TREE test suite, this competition is expected to promote research in smart grids and advanced optimization algorithms and explore potential research directions for super large-scale optimization, especially for the computational intelligence community.
 
 Participants are encouraged to develop the algorithm to solve this optimization problem, not just a specific one. 
 Participants may propose a new optimization algorithm or utilize a hybrid of previously proposed algorithms.
@@ -72,14 +73,16 @@ For participants planning to submit a paper to the 2024 IEEE Congress on Evoluti
  - Deadline: 15th January 2024
  - Notification: 15th March 2024
  - Congress: 30th June 2024 - 5th July 2024, Yokohama, Japan
-Note: You are encouraged to submit your paper to the given at [CEC 2024](https://2024.ieeewcci.org/)
+Note: You are encouraged to submit your paper to two relevant special sessions via [CEC 2024](https://2024.ieeewcci.org/), i.e.
+ - [Evolutionary Computation in Healthcare Industry](https://sites.google.com/view/ieee-cis-tf-ish/wcci-2024-special-session-on-healthcare)
+ - [Large-scale Multi-objective Optimization](https://github.com/BIMK/cec2024)
 **Participants for competition**
  - Results submission deadline: 15 June 2024
  - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
 
 ## Awards
 ### - Each winner will get an IEEE certificate!!!
-### - An award funding of CNY 10,000 will be sponsored by GLRODA (https://www.glroad.com/)!!!
+### - An award funding of CNY 10,000 will be sponsored by [GLRODA](https://www.glroad.com/)!!!
 ### - An award funding of USD 500 will be applied from the IEEE CIS Education Competition Subcommittee!!!
 
 ## Competition Organizers:
