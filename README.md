@@ -31,19 +31,24 @@ platemo('problem',@ETT1,'algorithm',@NSGAII,'N',50,'maxFE',1e7,'save',1)
   
 * The test problems are
 
-|             Problem             |      Number of Objectives       |   Number of Decision Variables     |   Number of Function Evaluations    |  Cost of Memory (Popsize=10)    |
+|             Problem             |      Number of Objectives       |   Number of Decision Variables     |   Maximum Number of Function Evaluations    |  Cost of Memory (Popsize=10)    |
 | :-----------------------------: | :-----------------------------: | :-------------------------------:  | :--------------------------------:  | :----------------------------:  |
 |             ETT1                |              M=2                |             D = 1,251,016          |                FE = 1E7             |                ≈ 20 Gbit        |
 |             ETT2                |              M=2                |             D = 12,510,016         |                FE = 1E6             |                ≈ 40 Gbit        |
 |             ETT3                |              M=2                |             D = 125,100,016        |                FE = 1E5             |                ≈ 80 Gbit        |
 
-  ETT1 (D=1251016), ETT2 (D=12510016), ETT3 (D=125100016),
-  The maximum number of function evaluations (***maxFE=1e7, 1e6, 1e5 for the three problems, respectively ***).
   <img src="https://github.com/ChengHust/IEEE-CEC-2024-Competition/blob/main/CEC2024Competition_Settings.png" />
-* Participants are allowed to use the parallel execution mode for efficiency.
 * It is remarkable that an individual with a high-dimensional problem will be memory-costly in PlatEMO. For example, the memory cost will be 20Gbits, 40Gbits, and 80Gbits for the three problems with a population size of 50.
-* To avoid memory overflow in Matlab, it is suggested that matrix operation related to decision variables should be re-write in the "for-end" format. 
-
+* To avoid memory overflow in Matlab, it is suggested that matrix operations related to decision variables should be re-write in the "for-end" loop style, e.g.,
+```
+Offspring  = OperatorGA(Problem,Population);
+```
+should be re-written as
+```
+for i = 1 : N/2
+  Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
+end
+```
 
 ## Important Dates:
 For participants planning to submit a paper to the 2024 IEEE Congress on Evolutionary Computation:
@@ -51,10 +56,10 @@ For participants planning to submit a paper to the 2024 IEEE Congress on Evoluti
  - Deadline: 15th January 2024
  - Notification: 15th March 2024
  - Congress: 30th June 2024 - 5th July 2024, Yokohama, Japan
-Note: You are encouraged to submit your paper to the given at: [CEC 2024](https://2024.ieeewcci.org/)
-**Participants for competition** only:
-  - Results submission deadline: 15 June 2024
-  - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
+Note: You are encouraged to submit your paper to the given at [CEC 2024](https://2024.ieeewcci.org/)
+**Participants for competition**
+ - Results submission deadline: 15 June 2024
+ - You can submit your related documents and results to Dr. He (chenghe_seee@hust.edu.cn)/ Dr. Wang (hdwang@xidian.edu.cn)/ Dr. Tian (field910921@gmail.com).
 
 **Each winner will get an IEEE certificate!!!**
 **An award funding  of CNY 10,000 will be sponsored by GLRODA (https://www.glroad.com/)!!!**
