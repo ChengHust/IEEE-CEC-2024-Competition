@@ -60,7 +60,7 @@ Offspring  = OperatorGA(Problem,Population);
 should be re-written as
 ```
 for i = 1 : N/2
-Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
+  Offspring(i*2-1:i*2)  = OperatorGA(Problem,Population(i*2-1:i*2));
 end
 ```
 Also, a smaller population size, e.g., 10 or 20, could be set to satisfy the memory requirement.
