@@ -1,8 +1,8 @@
 # IEEE-CEC-2024-Competition
 The Platform for CEC 2024 Competition on "Super Large-scale Multiobjective Optimization for Status Assessment of Measuring Equipment"
 
-**Please download the PlatEMO platform for competition at [PlatEMO4.4](https://github.com/ChengHust/IEEE-CEC-2024-Competition/tree/master) using git lfs**
-**If you are not familiar with the LFS, please download the file via https://drive.google.com/file/d/1hfX8ejpZy4Dgx0daFZ3lItINfd_BpT1F/view?usp=drive_link**
+**Please download the PlatEMO platform for competition at [PlatEMO4.4](https://github.com/ChengHust/IEEE-CEC-2024-Competition/tree/master) using git lfs.**
+**If you are not familiar with the LFS, please download the file via [Google Drive](https://drive.google.com/file/d/1hfX8ejpZy4Dgx0daFZ3lItINfd_BpT1F/view?usp=drive_link)**
 
 ## Overview & Aim:
 ***
