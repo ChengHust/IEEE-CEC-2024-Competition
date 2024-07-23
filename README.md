@@ -1,4 +1,4 @@
-# IEEE-CEC-2024-Competition
+![image](https://github.com/user-attachments/assets/19bf67d8-7173-4492-b4a5-19da86f011ac)![image](https://github.com/user-attachments/assets/fa038c83-153c-4250-a936-a2cf85a869da)# IEEE-CEC-2024-Competition
 The Platform for CEC 2024 Competition on "Super Large-scale Multiobjective Optimization for Status Assessment of Measuring Equipment"
 
 **Please download the PlatEMO platform for competition at [PlatEMO4.4](https://github.com/ChengHust/IEEE-CEC-2024-Competition/tree/master) using git lfs.**
@@ -85,7 +85,23 @@ Note: You are encouraged to submit your paper to two relevant special sessions v
 ## Awards
 ### - Each winner will get an IEEE certificate!!!
 ### - An award funding of CNY 10,000 will be sponsored by [GLRODA](https://www.glroad.com/)!!!
-### - An award funding of USD 500 will be applied from the IEEE CIS Education Competition Subcommittee!!!
+
+## Congratulations to the winners of the competition!!!   
+The winners have been awarded CNY 10,000 by GLRODA. 
+The algorithm, instituite of the participants, and the winners are listed as follows:
+
+* ***Anhui University***
+Group-based Large-scale Competitive Swarm Optimizer
+Yichen He, Xing Liu, Shuai Shao, Yajie Zhang, Panpan Zhang, Shangshang Yang
+
+* ***Nanchang Hangkong University***
+  Efficient Super Large-Scale Multiobjective Particle Swarm Optimizer Based on Probabilistic Criteria
+Chao He,  Yan Hong, Congxuan Zhang, Ming Li, Hao Chen, Liyue Ge, and Qiongxiao Tang
+         
+* ***Huazhong University of Science and Technology***
+Alternating Large-Scale Multi-Objective Optimization Framework with Fast Sampling based Evolutionary Algorithm
+Yonglin He, Chaojun Ma, Chuanji Zhang, Zihan Gao, Qing Chen
+
 
 ## Competition Organizers:
 * ***Cheng He***
